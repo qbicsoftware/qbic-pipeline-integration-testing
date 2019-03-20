@@ -32,6 +32,6 @@ A repository to hold the code used for pipeline integration testing for nf-core/
 - Paired End Data
 
 ### Whole Genome Sequencing Project
-- Project code in qPortal: QM
+- Project code in qPortal: QXXWG
 - 1 Patient, QXXWG265AL
 - Paired End Data
