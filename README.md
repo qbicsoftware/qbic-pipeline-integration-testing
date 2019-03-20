@@ -28,8 +28,7 @@ A repository to hold the code used for pipeline integration testing for nf-core/
 ## Sarek Testcases
 ### Whole Exome Sequencing Project
 - Project code in qPortal: QMSHS
-- 1 Patient, QMSHS032B4 for normal, 
-QMSHS project --> 1 patient ( tumor, QMSHS034BK normal)
+- 1 Patient, QMSHS032B4 for tumor, QMSHS034BK for normal)
 - Paired End Data
 
 ### Whole Genome Sequencing Project
