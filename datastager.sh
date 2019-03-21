@@ -9,14 +9,17 @@ module load devel/java_jdk/1.8.0u121
 ###Stage Data now
 mkdir -p rnaseq/human/
 cd rnaseq/human/
-qpostman-0.3.0 -f rnaseq-dataset1.txt -u iiipe01
+qpostman-0.3.0 -f ../../rnaseq-testsets/rnaseq-dataset1.txt -u iiipe01
 cd ../..
 mkdir -p rnaseq/mouse/
 cd rnaseq/mouse/
-qpostman-0.3.0 -f rnaseq-dataset2.txt -u iiipe01
+qpostman-0.3.0 -f ../../rnaseq-testsets/rnaseq-dataset2.txt -u iiipe01
 cd ../..
-mkdir sarek/wes/
+mkdir -p sarek/wes/
 cd sarek/wes
-qpostman-0.3.0 -f wes-dataset.txt 
+qpostman-0.3.0 -f ../../sarek-testsets/wes-dataset.txt 
 cd ../.. 
+mkdir -p sarek/wgs/
+cd sarek/wgs
+qpostman-0.3.0 -f ../../sarek-testsets/wgs-dataset.txt 
 
