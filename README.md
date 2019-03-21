@@ -1,5 +1,5 @@
 # qbic-pipeline-integration-testing
-A repository to hold the code used for pipeline integration testing for nf-core/rnaseq and scilifelab/Sarek at QBIC.
+A repository to hold the code used for pipeline integration testing for nf-core/rnaseq and scilifelab/Sarek at QBIC. 
 
 ## Current concept of integration tests
 
@@ -35,3 +35,7 @@ A repository to hold the code used for pipeline integration testing for nf-core/
 - Project code in qPortal: QXXWG
 - 1 Patient, QXXWG265AL
 - Paired End Data
+
+
+#### Author
+Alexander Peltzer (alexander.peltzer@qbic.uni-tuebingen.de)
