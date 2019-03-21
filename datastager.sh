@@ -17,8 +17,8 @@ qpostman-0.3.0 -f ../../rnaseq-testsets/rnaseq-dataset2.txt -u iiipe01
 cd ../..
 mkdir -p sarek/wes/
 cd sarek/wes
-qpostman-0.3.0 -f ../../sarek-testsets/wes-dataset.txt 
+qpostman-0.3.0 -f ../../sarek-testsets/wes-dataset.txt -u iiipe01
 cd ../.. 
 mkdir -p sarek/wgs/
 cd sarek/wgs
-qpostman-0.3.0 -f ../../sarek-testsets/wgs-dataset.txt 
+qpostman-0.3.0 -f ../../sarek-testsets/wgs-dataset.txt -u iiipe01
