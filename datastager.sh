@@ -1,4 +1,5 @@
 #!/bin/bash
+#@author: Alexander Peltzer
 # This is a one-time runner required for setting up the data for the analysis tests. 
 ###Load required modules 
 module purge 
