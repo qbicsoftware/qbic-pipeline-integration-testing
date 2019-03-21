@@ -22,4 +22,3 @@ cd ../..
 mkdir -p sarek/wgs/
 cd sarek/wgs
 qpostman-0.3.0 -f ../../sarek-testsets/wgs-dataset.txt 
-
