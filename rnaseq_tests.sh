@@ -1,5 +1,7 @@
 #!/bin/bash
 #Please stage data beforehand using datastager.sh
+nextflow pull nf-core/rnaseq #to get newest versions of workflow releases loaded on cfc
+
 RELEASE=$1
 
 ##Run No1 of the integration test samples
