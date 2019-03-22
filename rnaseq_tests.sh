@@ -1,6 +1,10 @@
 #!/bin/bash
 #@author: Alexander Peltzer
 #Please stage data beforehand using datastager.sh
+module purge 
+module load qbic/qpostman/0.3.0
+module load qbic/singularity_slurm/3.0.3
+module load devel/java_jdk/1.8.0u121
 nextflow pull nf-core/rnaseq #to get newest versions of workflow releases loaded on cfc
 
 # Only argument, is which release should be tested (e.g. '1.3' or 'dev')
