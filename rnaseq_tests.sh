@@ -11,7 +11,7 @@ nextflow pull nf-core/rnaseq #to get newest versions of workflow releases loaded
 RELEASE=$1
 
 ##Run No1 of the integration test samples
-nextflow run nf-core/rnaseq -profile cfc -r ${RELEASE} --genome 'GRCm38' --reads 'rnaseq/mouse/*.fastq.gz' --singleEnd
+nextflow run nf-core/rnaseq -profile cfc -r ${RELEASE} --genome 'GRCm38' --reads 'rnaseq/mouse/*.fastq.gz' --singleEnd --outdir "results/rnaseq/mouse"
 
 ##Run No2 of the integration test samples
-nextflow run nf-core/rnaseq -profile cfc -r ${RELEASE} --genome 'GRCh37' --reads 'rnaseq/human/*R{1,2}*fastq.gz'
+nextflow run nf-core/rnaseq -profile cfc -r ${RELEASE} --genome 'GRCh37' --reads 'rnaseq/human/*R{1,2}*fastq.gz' --outdir "results/rnaseq/human"
