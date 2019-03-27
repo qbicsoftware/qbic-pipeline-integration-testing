@@ -12,18 +12,18 @@ RELEASE=$1
 
 ##Run No1 of the integration test samples
 #Run Mapping first
-nextflow run scilifelab/Sarek/main.nf -profile cfc -r ${RELEASE} --sample 'sarek-testsets/wes_input.tsv' --genome 'GRCh37' --outdir "results/sarek/wes"
+nextflow run scilifelab/Sarek/main.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --sample 'sarek-testsets/wes_input.tsv' --outdir "results/sarek/wes"
 
 #Run VC on germline data next
-nextflow run scilifelab/Sarek/germlineVC.nf -r ${RELEASE} --sample 'results/sarek/wes/Preprocessing/Recalibrated/recalibrated.tsv' -profile cfc --genome 'GRCh37' --tools 'HaplotypeCaller,strelka,manta' --targetBED 'sarek-testsets/testcap.bed' --outdir "results/sarek/wes"
+nextflow run scilifelab/Sarek/germlineVC.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --sample 'results/sarek/wes/Preprocessing/Recalibrated/recalibrated.tsv' --tools 'HaplotypeCaller,strelka,manta' --targetBED 'sarek-testsets/testcap.bed' --outdir "results/sarek/wes"
 
 #Run VC on somatic data next
-nextflow run scilifelab/Sarek/somaticVC.nf -r ${RELEASE} --sample 'results/sarek/wes/Preprocessing/Recalibrated/recalibrated.tsv' -profile cfc --genome 'GRCh37' --tools manta,strelka,ascat,mutect2 --targetBED 'sarek-testsets/testcap.bed'
+nextflow run scilifelab/Sarek/somaticVC.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --sample 'results/sarek/wes/Preprocessing/Recalibrated/recalibrated.tsv'  --tools manta,strelka,ascat,mutect2 --targetBED 'sarek-testsets/testcap.bed'
 
 #Annotate this stuff
-nextflow run scilifelab/Sarek/annotate.nf -r ${RELEASE} -profile cfc --genome 'GRCh37' --annotateTools 'HaplotypeCaller,strelka,manta' --tools 'VEP,snpEff' --outdir "results/sarek/wes"
+nextflow run scilifelab/Sarek/annotate.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --annotateTools 'HaplotypeCaller,strelka,manta' --tools 'VEP,snpEff' --outdir "results/sarek/wes"
 
 #Run MultiQC on the stuff
-nextflow run scilifelab/Sarek/runMultiQC.nf -r ${RELEASE} -profile cfc --outdir "results/sarek/wes"
+nextflow run scilifelab/Sarek/runMultiQC.nf -profile cfc -r ${RELEASE} --outdir "results/sarek/wes"
 
 
