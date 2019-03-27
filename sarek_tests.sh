@@ -10,7 +10,7 @@ nextflow pull scilifelab/Sarek #to get newest versions of workflow releases load
 # Only argument, is which release should be tested (e.g. '1.3' or 'dev')
 RELEASE=$1
 
-##Run No1 of the integration test samples
+##Run No1 of the integration test samples (WES data, somatic and germline)
 #Run Mapping first
 nextflow run scilifelab/Sarek/main.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --sample 'sarek-testsets/wes_input.tsv' --outdir "results/sarek/wes"
 
