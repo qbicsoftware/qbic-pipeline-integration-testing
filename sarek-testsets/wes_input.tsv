@@ -1,8 +1,8 @@
-GS160322	XY	0	GS160322_normal	L001	sarek/wes/GS160322_01_S1_L001_R1_001.fastq.gz	sarek/wes/GS160322_01_S1_L001_R2_001.fastq.gz
-GS160322	XY	0	GS160322_normal	L002	sarek/wes/GS160322_01_S1_L002_R1_001.fastq.gz	sarek/wes/GS160322_01_S1_L002_R2_001.fastq.gz
-GS160322	XY	0	GS160322_normal	L003	sarek/wes/GS160322_01_S1_L003_R1_001.fastq.gz	sarek/wes/GS160322_01_S1_L003_R2_001.fastq.gz
-GS160322	XY	0	GS160322_normal	L004	sarek/wes/GS160322_01_S1_L004_R1_001.fastq.gz	sarek/wes/GS160322_01_S1_L004_R2_001.fastq.gz
-GS160323	XY	0	GS160323_normal	L001	sarek/wes/GS160323_01_S2_L001_R1_001.fastq.gz	sarek/wes/GS160323_01_S2_L001_R2_001.fastq.gz
-GS160323	XY	0	GS160323_normal	L002	sarek/wes/GS160323_01_S2_L002_R1_001.fastq.gz	sarek/wes/GS160323_01_S2_L002_R2_001.fastq.gz
-GS160323	XY	0	GS160323_normal	L003	sarek/wes/GS160323_01_S2_L003_R1_001.fastq.gz	sarek/wes/GS160323_01_S2_L003_R2_001.fastq.gz
-GS160323	XY	0	GS160323_normal	L004	sarek/wes/GS160323_01_S2_L004_R1_001.fastq.gz	sarek/wes/GS160323_01_S2_L004_R2_001.fastq.gz
+patient1	XY	1	GS160322_tumor	L001	sarek/wes/GS160322_01_S1_L001_R1_001.fastq.gz	sarek/wes/GS160322_01_S1_L001_R2_001.fastq.gz
+patient1	XY	1	GS160322_tumor	L002	sarek/wes/GS160322_01_S1_L002_R1_001.fastq.gz	sarek/wes/GS160322_01_S1_L002_R2_001.fastq.gz
+patient1	XY	1	GS160322_tumor	L003	sarek/wes/GS160322_01_S1_L003_R1_001.fastq.gz	sarek/wes/GS160322_01_S1_L003_R2_001.fastq.gz
+patient1	XY	1	GS160322_tumor	L004	sarek/wes/GS160322_01_S1_L004_R1_001.fastq.gz	sarek/wes/GS160322_01_S1_L004_R2_001.fastq.gz
+patient1	XY	0	GS160323_normal	L001	sarek/wes/GS160323_01_S2_L001_R1_001.fastq.gz	sarek/wes/GS160323_01_S2_L001_R2_001.fastq.gz
+patient1	XY	0	GS160323_normal	L002	sarek/wes/GS160323_01_S2_L002_R1_001.fastq.gz	sarek/wes/GS160323_01_S2_L002_R2_001.fastq.gz
+patient1	XY	0	GS160323_normal	L003	sarek/wes/GS160323_01_S2_L003_R1_001.fastq.gz	sarek/wes/GS160323_01_S2_L003_R2_001.fastq.gz
+patient1	XY	0	GS160323_normal	L004	sarek/wes/GS160323_01_S2_L004_R1_001.fastq.gz	sarek/wes/GS160323_01_S2_L004_R2_001.fastq.gz
