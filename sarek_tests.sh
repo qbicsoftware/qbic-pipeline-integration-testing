@@ -21,7 +21,7 @@ nextflow run scilifelab/Sarek/germlineVC.nf -profile cfc -r ${RELEASE} --genome 
 nextflow run scilifelab/Sarek/somaticVC.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --sample 'results/sarek/wes/Preprocessing/Recalibrated/recalibrated.tsv' --tools manta,strelka,ascat,mutect2 --targetBED 'sarek-testsets/testcap.bed' --outDir "results/sarek/wes"
 
 #Annotate this stuff
-nextflow run scilifelab/Sarek/annotate.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --annotateTools 'HaplotypeCaller,strelka,manta' --tools 'VEP,snpEff'--outDir "results/sarek/wes"
+nextflow run scilifelab/Sarek/annotate.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --annotateTools 'HaplotypeCaller,strelka,manta' --tools 'VEP,snpEff' --outDir "results/sarek/wes"
 
 #Run MultiQC on the stuff
 nextflow run scilifelab/Sarek/runMultiQC.nf -profile cfc -r ${RELEASE} --outDir "results/sarek/wes"
