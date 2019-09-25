@@ -5,25 +5,27 @@ module purge
 module load qbic/qpostman/0.3.0
 module load qbic/singularity_slurm/3.0.3
 module load devel/java_jdk/1.8.0u121
-nextflow pull scilifelab/Sarek #to get newest versions of workflow releases loaded on cfc
+nextflow pull nf-core/sarek #to get newest versions of workflow releases loaded on cfc
 
 # Only argument, is which release should be tested (e.g. '1.3' or 'dev')
 RELEASE=$1
 
 ##Run No1 of the integration test samples (WES data, somatic and germline)
 #Run Mapping first
-nextflow run scilifelab/Sarek/main.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --sample 'sarek-testsets/wes_input.tsv' --outDir "results/sarek/wes"
+nextflow run nf-core/sarek -profile cfc -r ${RELEASE} --genome 'GRCh37' --input 'sarek-testsets/wes_input.tsv' --outDir "results/sarek/wes" -resume
+
+## Probably completely outdated stuff now!
+
 
 #Run VC on germline data next
-nextflow run scilifelab/Sarek/germlineVC.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --sample 'results/sarek/wes/Preprocessing/Recalibrated/recalibrated.tsv' --tools 'HaplotypeCaller,strelka,manta' --targetBED 'sarek-testsets/testcap.bed' --outDir "results/sarek/wes"
+#nextflow run scilifelab/Sarek/germlineVC.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --sample 'results/sarek/wes/Preprocessing/Recalibrated/recalibrated.tsv' --tools 'HaplotypeCaller,strelka,manta' --targetBED 'sarek-testsets/testcap.bed' --outDir "results/sarek/wes" -resume
 
 #Run VC on somatic data next
-nextflow run scilifelab/Sarek/somaticVC.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --sample 'results/sarek/wes/Preprocessing/Recalibrated/recalibrated.tsv' --tools manta,strelka,ascat,mutect2 --targetBED 'sarek-testsets/testcap.bed' --outDir "results/sarek/wes"
+#nextflow run scilifelab/Sarek/somaticVC.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --sample 'results/sarek/wes/Preprocessing/Recalibrated/recalibrated.tsv' --tools manta,strelka,ascat,mutect2 --targetBED 'sarek-testsets/testcap.bed' --outDir "results/sarek/wes" -resume
 
 #Annotate this stuff
-nextflow run scilifelab/Sarek/annotate.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --annotateTools 'HaplotypeCaller,strelka,manta' --tools 'VEP,snpEff'--outDir "results/sarek/wes"
+#nextflow run scilifelab/Sarek/annotate.nf -profile cfc -r ${RELEASE} --genome 'GRCh37' --annotateTools 'HaplotypeCaller,strelka,manta' --tools 'VEP,snpEff' --outDir "results/sarek/wes" -resume
 
 #Run MultiQC on the stuff
-nextflow run scilifelab/Sarek/runMultiQC.nf -profile cfc -r ${RELEASE} --outDir "results/sarek/wes"
-
+#nextflow run scilifelab/Sarek/runMultiQC.nf -profile cfc -r ${RELEASE} --outDir "results/sarek/wes" -resume 
 
